@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "fastify": "^4.22.2"
+  }
+}
