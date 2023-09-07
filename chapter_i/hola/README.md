@@ -152,7 +152,7 @@ echo {}> .prettierrc.json
     "semi": false
 }
 ```
-- * Add in package.json
+- Add in package.json
 ```
 "scripts": {
     "dev": "nodemon src/index.ts",
@@ -186,7 +186,7 @@ module.exports = {
     root: true,
   };
 ```
-- * Add in package.json
+- Add in package.json
 ```
 "scripts": {
     "dev": "nodemon src/index.ts",
@@ -197,3 +197,4 @@ module.exports = {
   },
 ```
 - Install ESLint extension to Visual Studio Code
+
