@@ -1,18 +1,6 @@
 # Prisma ORM
 
-## Install Prisma as global
-```
-pnpm add -g prisma
-```
-## Install the Prisma CLI as a development dependency in the project.
-```
-pnpm add -D prisma
-```
-## Set up a new Prisma project with PostgreSQL (default)
-```
-prisma init
-```
-## Create user and database in PostgreSQL
+## Create user and database in PostgreSQL.
 ```
 sudo su - postgres
 ```
@@ -43,7 +31,41 @@ create database hola
 ```
 pgcli -u hola -w h -d hola
 ```
-## Install and generate Prisma Client
+## Install Prisma as global.
+```
+pnpm add -g prisma
+```
+## Install the Prisma CLI as a development dependency in the project.
+```
+pnpm add -D prisma
+```
+## Set up a new Prisma project with PostgreSQL (default).
+```
+prisma init
+```
+### Show option
+```
+prisma --help
+```
+## Create migrations from your Prisma schema, apply them to the database.
+```
+prisma migrate dev
+```
+### Show option.
+```
+prisma migrate --help
+```
+## Install and generate Prisma Client.
 ```
 pnpm add @prisma/client
+```
+## Install plugin helper for Fastify.
+``` 
+pnpm add fastify-plugin
+```
+## Create prisma plugin 
+- In plugins/prisma.ts and register in index.ts
+## Start prisma studio
+```
+prisma studio
 ```

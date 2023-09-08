@@ -1,9 +1,9 @@
 import { FastifyInstance } from 'fastify'
 
-async function routes(fastify: FastifyInstance) {
+async function routePing(fastify: FastifyInstance) {
   fastify.get('/ping', async () => {
     return { message: 'pong' }
   })
 }
 
-export = routes
+export = routePing

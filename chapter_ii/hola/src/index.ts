@@ -1,11 +1,15 @@
 import fastify from 'fastify'
-import routes from './modules/ping/ping.route'
+import prismaPlugin from './plugins/prisma'
+import routePing from './modules/ping/ping.route'
+import routeVersion from './modules/version/version.route'
 
 const server = fastify({
   logger: true
 })
 
-server.register(routes)
+server.register(routePing)
+server.register(routeVersion)
+server.register(prismaPlugin)
 
 const start = async () => {
   try {
