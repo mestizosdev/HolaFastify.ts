@@ -17,7 +17,14 @@ show hba_file;
 vim /var/lib/pgsql/data/pg_hba.conf
 ```
 ```
-host    all             all             127.0.0.1/32            trust
+# "local" is for Unix domain socket connections only
+local   all             postgres                                peer
+local   all             hola                                    trust
+# "local" is for Unix domain socket connections only
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            scram-sha-256
+# IPv6 local connections:
+host    all             all             ::1/128                 scram-sha-256
 ```
 ```
 sudo systemctl restart postgresql.service
@@ -68,4 +75,8 @@ pnpm add fastify-plugin
 ## Start prisma studio
 ```
 prisma studio
+```
+## Start
+```
+pnpm run dev
 ```
